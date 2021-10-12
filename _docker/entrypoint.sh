@@ -47,9 +47,9 @@ if [ "$JEKYLL_ROOTLESS" ]; then
 fi
 
 # Custom code
-mv /srv/jekyll2/* /srv/jekyll & echo "Updating Gemfile..."
+mv -f /srv/jekyll2/* /srv/jekyll & echo "Moving Gemfile from temporary folder /srv/jekyll2/ to /srv/jekyll/..."
 wait
 
-bundle update github-pages && jekyll serve
+jekyll serve --incremental --livereload --verbose --force_polling
 
 exec "$@"

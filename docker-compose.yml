@@ -8,6 +8,8 @@ services:
   github-page:
     image: github-page-docker
     volumes:
-      - ./:/srv/jekyll
+      - './:/srv/jekyll'
+      - /srv/jekyll/_site/
     ports:
       - '4000:4000'
+      - '35729:35729'
