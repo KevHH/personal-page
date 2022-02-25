@@ -25,7 +25,7 @@ jobs:
       
       - name: Commit  #no commit if last amendment is not by bot, in which case one can only manual override
         run: |
-          lastmsg=$(git log -1 --pretty=%B | sed "s,\(\r$\|\n$\),,g") 
+          lastmsg=$(git log -1 --pretty=%B | sed "s,[\(\r$\|\n$| \)]*,,g") 
           if ( $lastmsg = "weatherbot" ); then 
             git commit --amend -m "weatherbot" && git add . && git push origin
           else
