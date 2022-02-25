@@ -30,7 +30,6 @@ jobs:
           bash << EOF
           if ( $last_message = "weatherbot" ); then 
             git commit --amend -m "weatherbot" && git add . && git push origin
-          else
           fi
           EOF
           
