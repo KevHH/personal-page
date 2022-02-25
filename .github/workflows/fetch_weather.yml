@@ -10,9 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2.3.1
+        run: |
+          git config --global user.email "git@github.com"
+          git config --global user.name KevHH
+          git config --global credential.helper store
+          git clone https://KevHH:$GH_TOKEN@github.com/KevHH/personal-page .
 
       - name: Update weather icon
+        working-directory: ./personal-page
         run: |
           curl https://weatherdbi.herokuapp.com/data/weather/shantou | jq '.currentConditions.iconURL'
 
