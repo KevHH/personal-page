@@ -19,13 +19,13 @@ jobs:
           git clone https://KevHH:$GH_TOKEN@github.com/KevHH/personal-page .
 
       - name: Update weather icon
-        working-directory: ./personal-page
+        working-directory: personal-page
         run: |
           url=$(curl https://weatherdbi.herokuapp.com/data/weather/shantou | jq '.currentConditions.iconURL')
           sed -i -e "s/src=\"*\"/src=\"$url\"/g" ./text/footer.md
       
       - name: Commit  #unless last amendment is not by bot, in which case wait for 30 more mins
-        working-directory: ./personal-page
+        working-directory: personal-page
         run: |
           last_message=$(git log -1 --pretty=%B | xargs)
           if ( $last_message = "weatherbot" ); then (git commit --amend -m "weatherbot" && git add . && git push origin) fi
