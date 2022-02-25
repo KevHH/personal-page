@@ -21,7 +21,7 @@ jobs:
       - name: Update weather icon
         run: |
           url=$(curl https://weatherdbi.herokuapp.com/data/weather/shantou | jq '.currentConditions.iconURL')
-          sed -i -e "s/src=\"[^\"]*\"/src=\"123\"/g" ./text/footer.md
+          sed -i -e "s/src=\"[^\"]*\"/src=\"$url\"/g" ./text/footer.md
       
       - name: Commit  #unless last amendment is not by bot, in which case wait for 30 more mins
         run: |
