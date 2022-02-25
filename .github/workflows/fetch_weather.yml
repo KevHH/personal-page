@@ -26,10 +26,10 @@ jobs:
       - name: Commit  #no commit if last amendment is not by bot, in which case one can only manual override
         run: |
           lastmsg=$(git log -1 --pretty=%B | xargs)
-          if [ "$lastmsg" -eq "weatherbot" ] 
+          if [ "$lastmsg" = "weatherbot" ] 
           then
             git commit --amend -m "weatherbot" && git add . && git push origin
-          elif [ "${{github.event_name}}" -eq "workflow_dispatch" ] 
+          elif [ "${{github.event_name}}" = "workflow_dispatch" ] 
           then
               git commit -m "weatherbot" && git add . && git push origin
           fi
