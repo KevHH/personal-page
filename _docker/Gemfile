@@ -1,7 +1,0 @@
-source "https://rubygems.org"
-
-# dependencies obtained from https://pages.github.com/versions/, last updated 2021-09-13 
-# include listen to deal with https://talk.jekyllrb.com/t/jekyll-serve-auto-regeneration-not-recognizing-changes-after-gemfile-update/5335/3
-
-gem 'github-pages', '= 219'
-gem 'listen', '~> 3.2.1'

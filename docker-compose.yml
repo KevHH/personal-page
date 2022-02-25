@@ -1,15 +1,12 @@
-#
-#    Docker-compose file for GitHub Page
-#
 
 version: '3'
 
 services:
   github-page:
-    image: github-page-docker
+    image: ghcr.io/kevhh/github-page:219
     volumes:
       - './:/srv/jekyll'
       - /srv/jekyll/_site/
     ports:
-      - '4000:4000'
-      - '35729:35729'
+      - '1000:4000'
+      - '1001:35729'

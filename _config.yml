@@ -1,7 +1,22 @@
-remote_theme: pages-themes/midnight@v0.2.0
+title: Kevin Han Huang 黄瀚
+logo: /assets/logo.png
+headshot: /assets/headshot.png
+description: A bit of space to record a bit too many things.
 
-title: Midnight theme
-description: Midnight is a theme for GitHub Pages.
-
-plugins:
-  - jekyll-remote-theme
+# specify navigation / menu bar
+nav:
+  item1:
+    title: About Me
+    url: /
+  item2:
+    title: Research
+    url: /research
+  item3:
+    title: Teaching
+    url: /teaching
+  item4: 
+    title: '&#123; x ∉ Maths &#125;'
+    url: /non-maths
+  item5:
+    title: Collection
+    url: /collection
