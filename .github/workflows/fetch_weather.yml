@@ -18,10 +18,12 @@ jobs:
           git config --global credential.helper store
           git clone https://KevHH:$GH_TOKEN@github.com/KevHH/personal-page .
 
-      - name: Update weather icon
+      - name: Update weather
         run: |
           url=$(curl https://weatherdbi.herokuapp.com/data/weather/shantou | jq '.currentConditions.iconURL')
           sed -i -e "s,src=\"[^\"]*\",src=\"$url\",g" ./text/footer.md
+          comment=$(curl https://weatherdbi.herokuapp.com/data/weather/shantou | jq '.currentConditions.comment')
+          sed -i -e "s,alt=\"[^\"]*\",alt=\"$comment\",g" ./text/footer.md
       
       - name: Commit  #no commit if last amendment is not by bot, in which case one can only manual override
         run: |
