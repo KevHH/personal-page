@@ -31,5 +31,5 @@ jobs:
             git commit --amend -m "weatherbot" && git add . && git push origin
           elif [ "${{github.event_name}}" = "workflow_dispatch" ] 
           then
-              git commit -m "weatherbot" && git add . && git push origin
+            git commit -m "weatherbot" && git add . && git push origin
           fi
