@@ -3,11 +3,12 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "*/30 * * * *"
-  
 
 jobs:
   fetch-weather:
     runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
     steps:
       - name: Checkout
         run: |
