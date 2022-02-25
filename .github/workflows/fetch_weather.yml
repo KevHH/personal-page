@@ -27,10 +27,3 @@ jobs:
         run: |
           lastmsg=$(git log -1 --pretty=%B)
           lastmsg=${lastmsg//[$'\t\r\n']}
-          if ( $lastmsg = "weatherbot" ); then 
-            git commit --amend -m "weatherbot" && git add . && git push origin
-          else
-            if ( "${{github.event_name}}" = "workflow_dispatch"); then
-              git commit -m "weatherbot" && git add . && git push origin
-            fi
-          fi
