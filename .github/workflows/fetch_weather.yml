@@ -20,12 +20,12 @@ jobs:
 
       - name: Update weather icon
         run: |
-          url=$(curl https://weatherdbi.herokuapp.com/data/weather/shantou | jq '.currentConditions.iconURL')
+          export url=`curl https://weatherdbi.herokuapp.com/data/weather/shantou | jq '.currentConditions.iconURL'`
           sed -i -e "s,src=\"[^\"]*\",src=\"$url\",g" ./text/footer.md
       
       - name: Commit  #no commit if last amendment is not by bot, in which case one can only manual override
         run: |
-          lastmsg=$(echo "$(git log -1 --pretty=%B | xargs)")
+          export lastmsg=`git log -1 --pretty=%B | xargs`
           if ( $lastmsg = "weatherbot" ); then 
             git commit --amend -m "weatherbot" && git add . && git push origin
           else
