@@ -1,1 +1,1 @@
-<img src="/assets/weather-icon.png" alt="/text/weather.md" width="12" height="12" style="vertical-align:middle;position:relative;top:-1pt;"/> Weather in my [hometown](https://en.wikipedia.org/wiki/Shantou), 20 Feb 2022, according to [WeatherDB](https://weatherdbi.herokuapp.com/)
+<img src="/assets/weather-icon.png" alt="sunny" width="12" height="12" style="vertical-align:middle;position:relative;top:-1pt;"/> Weather in my [**hometown**](https://en.wikipedia.org/wiki/Shantou), 20 Feb 2022. Source: [**WeatherDB**](https://weatherdbi.herokuapp.com/)
