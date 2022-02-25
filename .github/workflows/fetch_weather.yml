@@ -25,7 +25,7 @@ jobs:
       
       - name: Commit  #no commit if last amendment is not by bot, in which case one can only manual override
         run: |
-          echo ${{github.event.action}}
+          echo "${{github.event_name}}"
           last_message=$(git log -1 --pretty=%B | xargs)
           bash << EOF
           if ( $last_message = "weatherbot" ); then 
