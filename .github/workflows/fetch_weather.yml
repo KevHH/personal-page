@@ -25,5 +25,4 @@ jobs:
       
       - name: Commit  #no commit if last amendment is not by bot, in which case one can only manual override
         run: |
-          lastmsg=$(git log -1 --pretty=%B)
-          lastmsg=${lastmsg//[$'\t\r\n']}
+          lastmsg=$(git log -1 --pretty=%B | xargs)
