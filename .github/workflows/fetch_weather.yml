@@ -16,8 +16,13 @@ jobs:
           git config --global credential.helper store
           git clone https://KevHH:$GH_TOKEN@github.com/KevHH/personal-page .
 
-      - name: Update weather icon
+      - name: Update weather icon and commit
         working-directory: ./personal-page
         run: |
-          curl https://weatherdbi.herokuapp.com/data/weather/shantou | jq '.currentConditions.iconURL'
+          url=$(curl https://weatherdbi.herokuapp.com/data/weather/shantou | jq '.currentConditions.iconURL')
+          sed -i -e "s/src=\"*\"/src=\"$url\"/g" ./text/footer.md
+          git commit -m "weather update"
+          git add .
+          git push origin
+          
 
