@@ -2,8 +2,12 @@
 <html lang="en">
   {% include head.html %}
   <body>
-    {% include nav.html %}
-    {{ content }} 
-    {% include footer.html %}
+    <div class="flex flex-col justify-between h-screen">
+        {% include nav.html %}
+        <div class="mb-auto w-full">
+            {{ content }}
+        </div>
+        {% include footer.html %}
+    </div>
   </body>
 </html>
