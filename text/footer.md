@@ -1,1 +1,1 @@
-<img src="assets/weather.png" alt="Clear with periodic clouds* width="25" height="25" style="vertical-align:middle;position:relative;top:-1pt;"/> Weather in my [**hometown**](https://en.wikipedia.org/wiki/Shantou) now. Source: [**weatherDB**](https://weatherdbi.herokuapp.com/)
+<img src="assets/weather.png" alt="Clear with periodic clouds" width="25" height="25" style="vertical-align:middle;position:relative;top:-1pt;"/> Weather in my [**hometown**](https://en.wikipedia.org/wiki/Shantou) now. Source: [**weatherDB**](https://weatherdbi.herokuapp.com/)

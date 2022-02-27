@@ -28,7 +28,7 @@ jobs:
           url=$(curl https://weatherdbi.herokuapp.com/data/weather/shantou | jq -r '.currentConditions.iconURL')
           curl $url -o assets/weather.png
           comment=$(curl https://weatherdbi.herokuapp.com/data/weather/shantou | jq -r '.currentConditions.comment')
-          sed -i -e "s,alt=\"[^\"]*\" ,alt=\"$comment\* ,g" ./text/footer.md
+          sed -i -e "s,alt=\"[^\"]*\" ,alt=\"$comment\" ,g" ./text/footer.md
       
       - name: Commit  #no commit if last amendment is not by bot, in which case one can only manual override
         run: |
