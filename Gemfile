@@ -1,4 +1,4 @@
 source "https://rubygems.org"
 
-gem 'github-pages', '= 219'
-gem "webrick", "~> 1.7"
+gem 'jekyll', '~> 4.1.1'
+gem 'jekyll-postcss'
