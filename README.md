@@ -1,7 +1,7 @@
 # Personal Website
 
 ## Credits
-- [Tailwind with Jekyll setup source](https://github.com/jmau111/jekyll-tailwindcss)
+- [This blog](https://medium.com/@mauddev/jekyll-tailwind-netlify-9496352b49ee) helped me solve my Tailwind and Jekyll setup headache with [jekyll-postcss-v2](https://github.com/bglw/jekyll-postcss-v2)
 
 
 ## To-do
