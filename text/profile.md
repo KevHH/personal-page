@@ -4,5 +4,5 @@ Prior to my PhD, I receive my [Bachelor and Master in Mathematics](https://www.m
 
 I organise the [Foundations and Landmarks reading group](https://foundations-landmarks.notion.site/) with [Max Hird](https://www.linkedin.com/in/max-hird-366a30b4/), a biweekly reading group based in London, reviewing foundational papers in probability and statistics. 
 
-I also dabble in some [software dev, nonprofit work, and a bit of cooking](/non-maths) on the side.
+I also do [nonprofit work, software development, and a bit of cooking](/non-maths) on the side.
 
