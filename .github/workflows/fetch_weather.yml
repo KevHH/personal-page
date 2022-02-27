@@ -17,10 +17,14 @@ jobs:
           git config --global user.name "KevHH"
           git config --global credential.helper store
           git clone https://KevHH:$GH_TOKEN@github.com/KevHH/personal-page .
+          
+      - name: Update DNS
+        run: |
+          sudo chown -R runner:runner /run/systemd/resolve/stub-resolv.conf
+          sudo echo "nameserver 8.8.8.8" > /run/systemd/resolve/stub-resolv.conf
 
       - name: Update weather
         run: |
-          sudo echo "nameserver 8.8.8.8" >> /etc/resolv.conf
           url=$(curl https://weatherdbi.herokuapp.com/data/weather/shantou | jq '.currentConditions.iconURL')
           curl $url -o assets/weather.png
           comment=$(curl https://weatherdbi.herokuapp.com/data/weather/shantou | jq '.currentConditions.comment')
