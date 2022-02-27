@@ -21,7 +21,7 @@ jobs:
       - name: Update weather
         run: |
           url=$(curl https://weatherdbi.herokuapp.com/data/weather/shantou | jq '.currentConditions.iconURL')
-          curl -L "$url" -o assets/weather.png
+          curl -L $url -o assets/weather.png
           comment=$(curl https://weatherdbi.herokuapp.com/data/weather/shantou | jq '.currentConditions.comment')
           sed -i -e "s,alt=\"[^\"]*\" ,alt=$comment ,g" ./text/footer.md
       
