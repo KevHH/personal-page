@@ -1,16 +1,19 @@
 module.exports = {
-    purge: [
+    mode: 'jit',
+    content: [
       './_includes/**/*.html',
       './_layouts/**/*.html',
-      './_posts/*.md',
+      './_posts/*.html',
       './*.html',
     ],
-    darkMode: false,
     theme: {
       extend: {},
     },
-    variants: {},
+    variants: {
+      extend: {},
+    },
     plugins: [
       require('@tailwindcss/typography'),
     ],
-  }
+}
+  

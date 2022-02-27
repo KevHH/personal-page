@@ -21,3 +21,6 @@ nav:
   item5:
     title: Collection
     url: /collection
+
+plugins:
+  - jekyll-postcss

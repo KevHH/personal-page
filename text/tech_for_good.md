@@ -1,0 +1,5 @@
+I am a firm advocate for tech for good: I beileve that technological advances should be coupled with responsible and careful assessments of their implications, and that technology could only be the equaliser it promised to be when actively harnessed, tamed and adapted.
+
+I volunteer with an amazing global nonprofit called [Bridges for Enterprise (BfE)](https://www.bridgesforenterprise.com/), which provides pro-bono consulting services to social enterprise in the developing world. I founded the [Technical Advisory branch](https://www.bridgesforenterprise.com/) of BfE's flagship incubation programme and the internal [Technology Division](https://tech.bridgesforenterprise.com/). Currently, I am BfE's [Global Head of Technology] overseeing analytics, algorithms, software development, DevOps and security. See a [talk](https://www.youtube.com/watch?v=0SrgImNwIw0) I gave at [Bytes of Good Live](https://bytesofgood.org/) on BfE's take on tech for good.
+
+For inquiries on BfE, or chat about tech for good and technology in the developing world, drop me an email at **kevin[dot]huang[at]bridgesforenterprise[dot]com**.
