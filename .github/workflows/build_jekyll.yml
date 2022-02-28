@@ -46,4 +46,5 @@ jobs:
       
       - name: Commit
         if: failure()
+        working-directory: prod
         run: git add . && git commit -m "build" && git push origin
