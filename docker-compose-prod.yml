@@ -6,4 +6,4 @@ services:
     image: ghcr.io/kevhh/jekyll-tailwind:4.1.1
     volumes:
       - './:/srv/jekyll'
-    entrypoint: yarn build
+    entrypoint: sh -c "mv -f /srv/jekyll2/* /srv/jekyll && yarn build"
