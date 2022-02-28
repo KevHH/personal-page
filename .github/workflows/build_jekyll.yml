@@ -27,21 +27,23 @@ jobs:
           username: KevHH 
           password: ${{ secrets.GH_TOKEN }}
 
-      - name: build
+      - name: Build
         working-directory: dev
         run: |
           chmod -R 777 .
           docker-compose -f docker-compose-prod.yml up
           find . -regex  "_site\\\\(.*\.json|.*\.config\.js|.*\.yml|.*\.lock|README.md)" -delete
 
-      - name: move build to prod
+      - name: Move build to prod
         run: |
           rm -rf prod/*
           cp -r dev/_site/* prod
-          cd prod
-          code=$(git diff --quiet)
-          if [ $code -eq 1 ]; then
-            git add . && git commit -m "build" && git push origin 
-          else
-            git diff --exit-code
-          fi            
+
+      - name: Check git diff
+        id: gitdiff
+        working-directory: prod
+        run: git diff --exit-code
+      
+      - name: Commit
+        if: steps.gitdiff.failure()
+        run: git add . && git commit -m "build" && git push origin
