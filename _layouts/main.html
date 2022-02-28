@@ -3,11 +3,15 @@
   {% include head.html %}
   <body>
     <div class="flex flex-col justify-between h-screen">
-        {% include nav.html %}
-        <div class="mb-auto w-full">
-            {{ content }}
-        </div>
-        {% include footer.html %}
+      {% if page.special %}
+        {% include nav.html special=page.special %}
+      {% else %}
+        {% include nav.html special=false %}
+      {% endif %}
+      <div class="mb-auto w-full">
+          {{ content }}
+      </div>
+      {% include footer.html %}
     </div>
   </body>
 </html>

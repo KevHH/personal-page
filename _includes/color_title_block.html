@@ -1,0 +1,15 @@
+<div class="w-full px-6" style="
+    {% if include.specialcolor == true %} background-color: var(--special-color); {% endif %}
+    padding-top: {{ include.pt }};
+    padding-bottom: {{ include.pb }};
+    "
+>
+
+    <div class="container max-w-4xl mx-auto flex flex-wrap">
+        <h1 class="mx-auto">{{ include.title }}</h1>
+        <div class="w-full p-2 md:px-6">
+            <zero-md src="{{ include.text }}"></zero-md>
+        </div>
+
+    </div>
+</div>

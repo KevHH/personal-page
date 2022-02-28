@@ -9,6 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      OPENWEATHER_API_KEY: ${{ OPENWEATHER_API_KEY }}
+      LAT: 23.36
+      LON: 116.72
       
     steps:
       - name: Checkout
@@ -25,8 +28,8 @@ jobs:
 
       - name: Update weather
         run: |
-          url=$(curl https://weatherdbi.herokuapp.com/data/weather/shantou | jq -r '.currentConditions.iconURL')
-          curl $url -o assets/weather.png
+          icon=$(curl "https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&appid=${OPENWEATHER_API_KEY}" | jq -r '.weather[0].icon]')
+          curl "https://openweathermap.org/img/wn/${icon}.png" -o assets/weather.png
           comment=$(curl https://weatherdbi.herokuapp.com/data/weather/shantou | jq -r '.currentConditions.comment')
           sed -i -e "s,alt=\"[^\"]*\" ,alt=\"$comment\" ,g" ./text/footer.md
       

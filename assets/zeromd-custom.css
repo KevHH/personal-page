@@ -1,0 +1,17 @@
+p, ul {
+  font-size: 14px; 
+}
+
+.markdown-body h2 {
+  font-size: 20px; 
+}
+
+@media (min-width:420px) {
+  p, ul {
+    font-size: 16px;
+  }
+
+  .markdown-body h2 {
+    font-size: 20px; 
+  }
+}
