@@ -30,7 +30,8 @@ jobs:
       - name: build
         working-directory: dev
         run: |
-          sudo docker-compose -f docker-compose-prod.yml up
+          chmod -R 777 .
+          docker-compose -f docker-compose-prod.yml up
           ls | grep -P ".*\.json|.*\.config.js|.*\.yml|.*\.lock$" | xargs -d"\n" rm
 
       - name: move build to prod
