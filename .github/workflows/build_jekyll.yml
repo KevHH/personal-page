@@ -35,6 +35,7 @@ jobs:
 
       - name: move build to prod
         run: |
+          ls -R
           rm -rf prod/*
           mv dev/_site/* prod/
           cd prod && git add . && git commit -m "build" && git push origin 
