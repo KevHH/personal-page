@@ -35,9 +35,8 @@ jobs:
           sed -i -e "s,alt=\"[^\"]*\" ,alt=\"$description\" ,g" ./text/footer.md
       
       - name: Commit  #no commit if last amendment is not by bot, in which case one can only manual override
-        continue-on-error: true
         run: |
-          git diff --exit-code
+          git diff --exit-code || true
           lastmsg=$(git log -1 --pretty=%B | xargs)
           if [ "$lastmsg" = "weatherbot" ]; then
             git add . && git commit --amend -m "weatherbot" && git push origin
