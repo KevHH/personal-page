@@ -1,1 +1,1 @@
-<img src="assets/weather.png" alt="clear sky" width="25" height="25" style="vertical-align:middle;position:relative;top:-1pt;"/> Weather in my [**hometown**](https://en.wikipedia.org/wiki/Shantou) now. Source: [**OpenWeather**](https://openweathermap.org/)
+<img src="assets/weather.png" alt="few clouds" width="25" height="25" style="vertical-align:middle;position:relative;top:-1pt;"/> Weather in my [**hometown**](https://en.wikipedia.org/wiki/Shantou) now. Source: [**OpenWeather**](https://openweathermap.org/)
