@@ -39,7 +39,7 @@ jobs:
           git diff --exit-code
           lastmsg=$(git log -1 --pretty=%B | xargs)
           if [ "$lastmsg" = "weatherbot" ]; then
-            git add . & git commit --amend -m "weatherbot" && git push origin
+            git add . && git commit --amend -m "weatherbot" && git push origin
           elif [ "${{github.event_name}}" = "workflow_dispatch" ]; then
-            git add . git commit -m "weatherbot" && git push origin
+            git add . && git commit -m "weatherbot" && git push origin
           fi
