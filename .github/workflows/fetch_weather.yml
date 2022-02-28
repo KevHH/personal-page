@@ -19,7 +19,7 @@ jobs:
           git config --global user.email "git@github.com"
           git config --global user.name "KevHH"
           git config --global credential.helper store
-          git clone https://KevHH:$GH_TOKEN@github.com/KevHH/personal-page .
+          git clone -b prod https://KevHH:$GH_TOKEN@github.com/KevHH/personal-page .
           
       - name: Update DNS
         run: |
