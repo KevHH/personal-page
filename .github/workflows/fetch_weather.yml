@@ -19,7 +19,8 @@ jobs:
           git config --global user.email "git@github.com"
           git config --global user.name "KevHH"
           git config --global credential.helper store
-          git clone -b prod https://KevHH:$GH_TOKEN@github.com/KevHH/personal-page .
+          git clone -b dev https://KevHH:$GH_TOKEN@github.com/KevHH/personal-page dev
+          git clone -b prod https://KevHH:$GH_TOKEN@github.com/KevHH/personal-page prod
           
       - name: Update DNS
         run: |
@@ -31,17 +32,44 @@ jobs:
           outputs=$(curl "https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&appid=${OPENWEATHER_API_KEY}" | jq -r '.weather[0] | (.icon) + "&" + (.description)')
           icon=$(echo "$outputs" | sed 's,&.*,,')
           description=$(echo "$outputs" | sed 's,.*&,,')
+          cd dev
           curl "https://openweathermap.org/img/wn/${icon}.png" -o assets/weather.png
           sed -i -e "s,alt=\"[^\"]*\" ,alt=\"$description\" ,g" ./text/footer.md
+          cd ../prod
+          cp ../dev/assets/weather.png assets/weather.png
+          sed -i -e "s,alt=\"[^\"]*\" ,alt=\"$description\" ,g" ./text/footer.md
       
-      - name: Check git diff
+      - name: Check git diff in dev
         id: gitdiff
+        working-directory: dev
         continue-on-error: true
         run: |
           git diff --quiet
           echo ::set-output name=gitdiff::$(echo $?)
 
-      - name: Commit
+      - name: Commit in dev
+        working-directory: dev
+        run: |
+          if [ ${{ steps.vars.outputs.gitdiff }} == 1 ]; then          
+            lastmsg=$(git log -1 --pretty=%B | xargs)
+            if [ "$lastmsg" == "weatherbot" ]; then
+              git add . && git commit --amend -m "weatherbot" && git push origin
+            else
+              git add . && git commit -m "weatherbot" && git push origin
+            fi
+          else
+            git diff --exit-code
+          fi
+      
+      - name: Check git diff in prod
+        id: gitdiff
+        working-directory: prod
+        continue-on-error: true
+        run: |
+          git diff --quiet
+          echo ::set-output name=gitdiff::$(echo $?)
+
+      - name: Commit in prod
         working-directory: prod
         run: |
           if [ ${{ steps.vars.outputs.gitdiff }} == 1 ]; then          
