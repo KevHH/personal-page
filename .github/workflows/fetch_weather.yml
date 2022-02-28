@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      OPENWEATHER_API_KEY: ${{ OPENWEATHER_API_KEY }}
+      OPENWEATHER_API_KEY: ${{ secrets.OPENWEATHER_API_KEY }}
       LAT: 23.36
       LON: 116.72
       
