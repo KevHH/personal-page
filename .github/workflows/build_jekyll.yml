@@ -42,9 +42,16 @@ jobs:
       - name: Check git diff
         id: gitdiff
         working-directory: prod
-        run: git diff --exit-code
-      
+        continue-on-error: true
+        run: |
+          git diff --quiet
+          echo ::set-output name=gitdiff::$(echo $?)
+
       - name: Commit
-        if: failure()
         working-directory: prod
-        run: git add . && git commit -m "build" && git push origin
+        run: |
+          if [ ${{ steps.vars.outputs.gitdiff }} == 1 ]; then
+            git add . && git commit -m "build" && git push origin
+          else
+            git diff --exit-code
+          fi

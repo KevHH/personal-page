@@ -33,17 +33,24 @@ jobs:
           description=$(echo "$outputs" | sed 's,.*&,,')
           curl "https://openweathermap.org/img/wn/${icon}.png" -o assets/weather.png
           sed -i -e "s,alt=\"[^\"]*\" ,alt=\"$description\" ,g" ./text/footer.md
-
+      
       - name: Check git diff
         id: gitdiff
-        run: git diff --exit-code
-      
-      - name: Commit
-        if: failure()
+        continue-on-error: true
         run: |
-          lastmsg=$(git log -1 --pretty=%B | xargs)
-          if [ "$lastmsg" = "weatherbot" ]; then
-            git add . && git commit --amend -m "weatherbot" && git push origin
+          git diff --quiet
+          echo ::set-output name=gitdiff::$(echo $?)
+
+      - name: Commit
+        working-directory: prod
+        run: |
+          if [ ${{ steps.vars.outputs.gitdiff }} == 1 ]; then          
+            lastmsg=$(git log -1 --pretty=%B | xargs)
+            if [ "$lastmsg" == "weatherbot" ]; then
+              git add . && git commit --amend -m "weatherbot" && git push origin
+            else
+              git add . && git commit -m "weatherbot" && git push origin
+            fi
           else
-            git add . && git commit -m "weatherbot" && git push origin
+            git diff --exit-code
           fi
