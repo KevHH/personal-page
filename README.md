@@ -9,7 +9,4 @@
 - Add GH Action testing Docker
 - Add [Plausible](https://plausible.io/)
 - Add Storybook
-
-- Tooltip for Weather
-- Animation for non-maths page
-- More Collection
+- Add Collection
