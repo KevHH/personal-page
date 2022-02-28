@@ -34,13 +34,13 @@ jobs:
           curl "https://openweathermap.org/img/wn/${icon}.png" -o assets/weather.png
           sed -i -e "s,alt=\"[^\"]*\" ,alt=\"$description\" ,g" ./text/footer.md
       
-      - name: Commit  #no commit if last amendment is not by bot, in which case one can only manual override
+      - name: Commit
         continue-on-error: true
         run: |
           git diff --exit-code
           lastmsg=$(git log -1 --pretty=%B | xargs)
           if [ "$lastmsg" = "weatherbot" ]; then
             git add . && git commit --amend -m "weatherbot" && git push origin
-          elif [ "${{github.event_name}}" = "workflow_dispatch" ]; then
+          else
             git add . && git commit -m "weatherbot" && git push origin
           fi
