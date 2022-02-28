@@ -39,20 +39,14 @@ jobs:
           rm -rf prod/*
           cp -r dev/_site/* prod
 
-      - name: Check git diff
-        id: gitdiff
-        working-directory: prod
-        continue-on-error: true
-        run: |
-          git diff --quiet
-          echo ::set-output name=gitdiff::$(echo $?)
-
       - name: Commit
         working-directory: prod
-        env:
-          GITDIFF: ${{ steps.vars.outputs.gitdiff }}
         run: |
-          if [ "$GITDIFF"  == 1 ]; then
+          getdiffcode() {
+            git diff --quiet
+            echo $?
+          }
+          if [ "$(getdiffcode)" == 1 ]; then
             git add . && git commit -m "build" && git push origin
           else
             git diff --exit-code
