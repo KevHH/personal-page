@@ -37,7 +37,7 @@ jobs:
       - name: Commit
         run: |
           code=$(git diff --quiet)
-          if [ "$code" == 1]; then
+          if [ "$code" == 1 ]; then
             lastmsg=$(git log -1 --pretty=%B | xargs)
             if [ "$lastmsg" = "weatherbot" ]; then
               git add . && git commit --amend -m "weatherbot" && git push origin
