@@ -37,6 +37,6 @@ jobs:
       - name: move build to prod
         run: |
           rm -rf prod/*
-          chmod -R 777 dev/_site && mv dev/_site/* prod/
+          cp dev/_site/* prod
           cd prod && git add . && git commit -m "build" && git push origin 
                       
