@@ -32,7 +32,7 @@ jobs:
         run: |
           chmod -R 777 .
           docker-compose -f docker-compose-prod.yml up
-          ls | grep -P ".*\.json|.*\.config\.js|.*\.yml|.*\.lock|README.md$" | xargs -d"\n" rm
+          find . -regex  ".*\.json|.*\.config\.js|.*\.yml|.*\.lock|README.md$" -delete
 
       - name: move build to prod
         run: |
