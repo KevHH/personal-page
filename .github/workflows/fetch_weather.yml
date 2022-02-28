@@ -28,6 +28,8 @@ jobs:
 
       - name: Update weather
         run: |
+          a=$(curl "https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&appid=${OPENWEATHER_API_KEY}")  
+          echo $a
           icon=$(curl "https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&appid=${OPENWEATHER_API_KEY}" | jq -r '.weather[0].icon')
           curl "https://openweathermap.org/img/wn/${icon}.png" -o assets/weather.png
           comment=$(curl https://weatherdbi.herokuapp.com/data/weather/shantou | jq -r '.currentConditions.comment')
