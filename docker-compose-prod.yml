@@ -6,7 +6,4 @@ services:
     image: jekyll-tailwind:4.1.1
     volumes:
       - './:/srv/jekyll'
-    entrypoint: yarn build && (ls | grep -P ".*\.json|.*\.config.js|.*\.yml|.*\.lock$" | xargs -d"\n" rm)
-    ports:
-      - '1000:4000'
-      - '1001:35729'
+    entrypoint: yarn build
