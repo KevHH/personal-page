@@ -39,7 +39,7 @@ jobs:
           rm -rf prod/*
           cp -r dev/_site/* prod
           cd prod
-          code=$(git diff --exit-code --quiet)
+          code=$(git diff --quiet)
           if (code == 1); then
             git add . && git commit -m "build" && git push origin 
           else
