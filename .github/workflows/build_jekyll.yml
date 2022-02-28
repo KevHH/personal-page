@@ -28,7 +28,7 @@ jobs:
           password: ${{ secrets.GH_TOKEN }}
 
       - name: build
-        directory: dev
+        working-directory: dev
         run: |
           docker-compose -f docker-compose-prod.yml up
           ls | grep -P ".*\.json|.*\.config.js|.*\.yml|.*\.lock$" | xargs -d"\n" rm
