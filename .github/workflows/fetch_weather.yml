@@ -39,7 +39,7 @@ jobs:
         run: git diff --exit-code
       
       - name: Commit
-        if: steps.gitdiff.outcome == "failure"
+        if: steps.gitdiff.outcome == 'failure'
         run: |
           lastmsg=$(git log -1 --pretty=%B | xargs)
           if [ "$lastmsg" = "weatherbot" ]; then
