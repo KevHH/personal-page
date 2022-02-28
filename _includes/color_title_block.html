@@ -1,14 +1,18 @@
-<div class="w-full px-6" style="
+<div class="w-full px-6 py-12" style="
     {% if include.specialcolor == true %} background-color: var(--special-color); {% endif %}
-    padding-top: {{ include.pt }};
-    padding-bottom: {{ include.pb }};
     "
 >
 
-    <div class="container max-w-4xl mx-auto flex flex-wrap">
-        <h1 class="mx-auto">{{ include.title }}</h1>
-        <div class="w-full p-2 md:px-6">
-            <zero-md src="{{ include.text }}"></zero-md>
+    <div class="container max-w-4xl mx-auto items-center flex">
+        <div class="flex w-1/4 text-2xl px-6 justify-center {% if include.specialcolor == false %} order-last {% endif %}">
+            <p class="font-light text-center">
+                {{ include.title }}
+            </p>
+        </div>
+        <div class="flex w-3/4 px-6">
+            <p class="text-md md:text-lg text-gray-600 leading-normal">
+                <zero-md src="{{ include.text }}"></zero-md>
+            </p>
         </div>
 
     </div>
