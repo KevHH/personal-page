@@ -39,20 +39,14 @@ jobs:
           cp ../dev/assets/weather.png assets/weather.png
           sed -i -e "s,alt=\"[^\"]*\" ,alt=\"$description\" ,g" ./text/footer.md
       
-      - name: Check git diff in dev
-        id: gitdiff
+      - name: Commit to dev
         working-directory: dev
-        continue-on-error: true
         run: |
-          git diff --quiet
-          echo ::set-output name=gitdiff::$(echo $?)
-
-      - name: Commit in dev
-        working-directory: dev
-        env:
-          GITDIFF: ${{ steps.vars.outputs.gitdiff }}
-        run: |
-          if [ "$GITDIFF" == 1 ]; then          
+          getdiffcode() {
+            git diff --quiet
+            echo $?
+          }
+          if [ "$(getdiffcode)" == 1 ]; then 
             lastmsg=$(git log -1 --pretty=%B | xargs)
             if [ "$lastmsg" == "weatherbot" ]; then
               git add . && git commit --amend -m "weatherbot" && git push origin
@@ -63,20 +57,14 @@ jobs:
             git diff --exit-code
           fi
       
-      - name: Check git diff in prod
-        id: gitdiff
+      - name: Commit to prod
         working-directory: prod
-        continue-on-error: true
         run: |
-          git diff --quiet
-          echo ::set-output name=gitdiff::$(echo $?)
-
-      - name: Commit in prod
-        working-directory: prod
-        env:
-          GITDIFF: ${{ steps.vars.outputs.gitdiff }}
-        run: |
-          if [ "$GITDIFF" == 1 ]; then          
+          getdiffcode() {
+            git diff --quiet
+            echo $?
+          }
+          if [ "$(getdiffcode)" == 1 ]; then    
             lastmsg=$(git log -1 --pretty=%B | xargs)
             if [ "$lastmsg" == "weatherbot" ]; then
               git add . && git commit --amend -m "weatherbot" && git push origin
