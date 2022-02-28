@@ -49,8 +49,10 @@ jobs:
 
       - name: Commit
         working-directory: prod
+        env:
+          GITDIFF: ${{ steps.vars.outputs.gitdiff }}
         run: |
-          if [ ${{ steps.vars.outputs.gitdiff }} == 1 ]; then
+          if [ "$GITDIFF"  == 1 ]; then
             git add . && git commit -m "build" && git push origin
           else
             git diff --exit-code

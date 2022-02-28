@@ -49,8 +49,10 @@ jobs:
 
       - name: Commit in dev
         working-directory: dev
+        env:
+          GITDIFF: ${{ steps.vars.outputs.gitdiff }}
         run: |
-          if [ ${{ steps.vars.outputs.gitdiff }} == 1 ]; then          
+          if [ "$GITDIFF" == 1 ]; then          
             lastmsg=$(git log -1 --pretty=%B | xargs)
             if [ "$lastmsg" == "weatherbot" ]; then
               git add . && git commit --amend -m "weatherbot" && git push origin
@@ -71,8 +73,10 @@ jobs:
 
       - name: Commit in prod
         working-directory: prod
+        env:
+          GITDIFF: ${{ steps.vars.outputs.gitdiff }}
         run: |
-          if [ ${{ steps.vars.outputs.gitdiff }} == 1 ]; then          
+          if [ "$GITDIFF" == 1 ]; then          
             lastmsg=$(git log -1 --pretty=%B | xargs)
             if [ "$lastmsg" == "weatherbot" ]; then
               git add . && git commit --amend -m "weatherbot" && git push origin
