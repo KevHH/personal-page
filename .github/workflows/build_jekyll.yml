@@ -35,11 +35,13 @@ jobs:
           find . -regex  "_site\(.*\.json|.*\.config\.js|.*\.yml|.*\.lock|README.md)" -delete
 
       - name: move build to prod
-        continue-on-error: true
         run: |
           rm -rf prod/*
           cp -r dev/_site/* prod
           cd prod
-          git diff --exit-code
-          git add . && git commit -m "build" && git push origin 
-                      
+          code=$(git diff --exit-code --quiet)
+          if (code == 1); then
+            git add . && git commit -m "build" && git push origin 
+          else
+            git diff --exit-code
+          fi            

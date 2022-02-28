@@ -35,12 +35,15 @@ jobs:
           sed -i -e "s,alt=\"[^\"]*\" ,alt=\"$description\" ,g" ./text/footer.md
       
       - name: Commit
-        continue-on-error: true
         run: |
-          git diff --exit-code
-          lastmsg=$(git log -1 --pretty=%B | xargs)
-          if [ "$lastmsg" = "weatherbot" ]; then
-            git add . && git commit --amend -m "weatherbot" && git push origin
+          code=$(git diff --exit-code)
+          if (code == 1); then
+            lastmsg=$(git log -1 --pretty=%B | xargs)
+            if [ "$lastmsg" = "weatherbot" ]; then
+              git add . && git commit --amend -m "weatherbot" && git push origin
+            else
+              git add . && git commit -m "weatherbot" && git push origin
+            fi
           else
-            git add . && git commit -m "weatherbot" && git push origin
-          fi
+            git diff --exit-code
+          fi            
