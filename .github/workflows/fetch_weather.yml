@@ -47,6 +47,8 @@ jobs:
             echo $?
           }
           if [ "$(getdiffcode)" == 1 ]; then 
+            time=$(date +%F-%H)
+            sed -i -e "s,src=\"assets\/weather\.png.*\" ,src=\"assets\/weather\.png\?hour=$time\" ,g" ./text/footer.md   # append date to force overwriting caching
             lastmsg=$(git log -1 --pretty=%B | xargs)
             if [ "$lastmsg" == "weatherbot" ]; then
               git add . && git commit --amend -m "weatherbot" && git push -f origin
@@ -65,6 +67,8 @@ jobs:
             echo $?
           }
           if [ "$(getdiffcode)" == 1 ]; then    
+            time=$(date +%F-%H)
+            sed -i -e "s,src=\"assets\/weather\.png.*\" ,src=\"assets\/weather\.png\?hour=$time\" ,g" ./text/footer.md   # append date to force overwriting caching
             lastmsg=$(git log -1 --pretty=%B | xargs)
             if [ "$lastmsg" == "weatherbot" ]; then
               git add . && git commit --amend -m "weatherbot" && git push -f origin 
