@@ -8,6 +8,7 @@ on:
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
+    if: ${{ github.event.head_commit.message }} != 'weatherbot'
     env:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}
       
@@ -19,21 +20,9 @@ jobs:
           git config --global credential.helper store
           git clone -b dev https://KevHH:$GH_TOKEN@github.com/KevHH/personal-page dev
           git clone -b prod https://KevHH:$GH_TOKEN@github.com/KevHH/personal-page prod
-      
-      - name: Terminate if last commit was weatherbot
-        id: checkweatherbot
-        working-directory: dev
-        run: |
-          lastmsg=$(git log -1 --pretty=%B | xargs)
-          if [ "$lastmsg" != "weatherbot" ]; then
-            echo "::set-output name=bot::false"
-          else
-            echo "::set-output name=bot::true"
-          fi
 
       - name: Login to GitHub Packages Docker Registry
         uses: docker/login-action@v1
-        if: ${{ steps.checkweatherbot.outputs.bot }} == 'false'
         with:
           registry: ghcr.io
           username: KevHH 
@@ -41,21 +30,18 @@ jobs:
 
       - name: Build
         working-directory: dev
-        if: ${{ steps.checkweatherbot.outputs.bot }} == 'false'
         run: |
           chmod -R 777 .
           docker-compose -f docker-compose-prod.yml up
           find . -regex  "_site\\\\(.*\.json|.*\.config\.js|.*\.yml|.*\.lock|README.md)" -delete
 
       - name: Move build to prod
-        if: ${{ steps.checkweatherbot.outputs.bot }} == 'false'
         run: |
           rm -rf prod/*
           cp -r dev/_site/* prod
 
       - name: Commit
         working-directory: prod
-        if: ${{ steps.checkweatherbot.outputs.bot }} == 'false'
         run: |
           getdiffcode() {
             git diff --quiet
