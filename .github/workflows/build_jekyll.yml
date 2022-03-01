@@ -27,6 +27,8 @@ jobs:
           lastmsg=$(git log -1 --pretty=%B | xargs)
           if [ "$lastmsg" != "weatherbot" ]; then
             echo "::set-output name=bot::false"
+          else
+            echo "::set-output name=bot::true"
           fi
 
       - name: Login to GitHub Packages Docker Registry
