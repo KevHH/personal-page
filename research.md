@@ -1,4 +1,4 @@
 ---
 layout: main
 ---
-{% include block.html text="text/research.md" %} set
+{% include block.html text="text/research.md" %}

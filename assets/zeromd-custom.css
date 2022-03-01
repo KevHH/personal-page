@@ -1,5 +1,6 @@
 p, ul {
   font-size: 14px; 
+  font-weight: 300;
 }
 
 .markdown-body h2 {
@@ -13,5 +14,15 @@ p, ul {
 
   .markdown-body h2 {
     font-size: 20px; 
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  p, ul, h2 {
+    color:#EEEEEE;
+  }
+  .markdown-body p a, 
+  .markdown-body ul a {
+    color:#A4D0FF;
   }
 }
