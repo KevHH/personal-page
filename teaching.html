@@ -25,26 +25,34 @@
     <script type="module" src="assets/zeromd.js"></script>
     <!-- END -- zero-md -- https://github.com/zerodevx/zero-md -->
   
-    <!-- START -- Tailwind Play CDN -- comment out in production 
-    <script src="https://cdn.tailwindcss.com"></script>
-    -- END -- Tailwind Play CDN -- comment out in production -->
+    <!-- START -- Tailwind Play CDN -- comment out in production -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <!-- END -- Tailwind Play CDN -- comment out in production -->
 
     <link rel="stylesheet" href="assets/main.css">
-    <link rel="stylesheet" href="assets/custom.css">
+    <link rel="stylesheet" href="assets/zeromd-custom.css">
     <script src="assets/icons/glyphs-core.js" type="module" defer></script>
     <script src="assets/icons/glyphs-brand.js" type="module" defer></script>
   </head>
-  <body>
+  <body class="bg-white dark:bg-stone-900">
     <div class="flex flex-col justify-between h-screen">
       
-        <div x-data="{ special: false }" style="" class="text-gray-800 relative z-10 px-6 border-b">
+        <div x-data="{ special: false }" 
+    class="relative z-10 px-6 border-b
+     
+        text-gray-800 border-[#e7ebe5] dark:text-gray-200 dark:border-stone-600
+    
+    ">
     <div class="h-20 pt-4 container mx-auto flex items-center justify-center">
         <div @click="special = false" class="flex-none flex items-center justify-start text-lg font-medium uppercase tracking-wider gap-4">
             <a href="/">Kevin Han Huang 黄瀚</a>
         </div>
         <!-- Menu -->
         <div x-data="{ open: false }" class="z-10 flex-auto">
-            <div :class="{ 'flex' : open, 'hidden' : open === false }" class="fixed md:relative top-0 left-0 w-full md:w-auto h-screen md:h-auto md:flex flex-col md:flex-row items-center justify-center md:justify-end z-40 bg-gray-200 md:bg-transparent leading-loose font-sans uppercase text-base md:text-xs tracking-wider gap-8 hidden">
+            <div :class="{ 'flex' : open, 'hidden' : open === false }" 
+            class="fixed md:relative top-0 left-0 w-full md:w-auto h-screen md:h-auto md:flex flex-col md:flex-row items-center justify-center md:justify-end z-40 md:bg-transparent leading-loose font-sans uppercase text-base md:text-xs tracking-wider gap-8 hidden
+            bg-gray-200 dark:bg-gray-600 
+            ">
                 
                     
                     <a @click="special = false" href="/">About Me</a>
@@ -77,7 +85,7 @@
 </div>
       
       <div class="mb-auto w-full">
-          <div class="w-full px-6 py-12 bg-white">
+          <div class="w-full px-6 py-12">
 
     <div class="container max-w-4xl mx-auto flex flex-wrap">
 
@@ -89,8 +97,9 @@
 </div>
 
       </div>
-      <footer class="w-full bg-white px-6 border-t">
-    <div class="container mx-auto y-6 text-xs text-slate-400">
+      <footer class="w-full px-6 border-t 
+    text-slate-400 border-[#e7ebe5] dark:text-gray-600 dark:border-stone-600">
+    <div class="container mx-auto text-xs text-slate-400">
         <zero-md src="text/footer.md">
             <template>
                 <style>  h1 { font-size: small;  } a { color: inherit; text-decoration: none;}  </style>
