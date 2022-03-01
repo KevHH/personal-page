@@ -49,7 +49,7 @@ jobs:
           if [ "$(getdiffcode)" == 1 ]; then 
             lastmsg=$(git log -1 --pretty=%B | xargs)
             if [ "$lastmsg" == "weatherbot" ]; then
-              git add . && git commit --amend -m "weatherbot" && git push origin
+              git add . && git commit --amend -m "weatherbot" && git push -f origin
             else
               git add . && git commit -m "weatherbot" && git push origin
             fi
@@ -67,7 +67,7 @@ jobs:
           if [ "$(getdiffcode)" == 1 ]; then    
             lastmsg=$(git log -1 --pretty=%B | xargs)
             if [ "$lastmsg" == "weatherbot" ]; then
-              git add . && git commit --amend -m "weatherbot" && git push origin
+              git add . && git commit --amend -m "weatherbot" && git push -f origin 
             else
               git add . && git commit -m "weatherbot" && git push origin
             fi
