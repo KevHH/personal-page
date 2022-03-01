@@ -1,4 +1,4 @@
-Through BfE Tech and personal projects, I dabble quite a bit in various aspects of software development and am still a keen follower of the ever-changing industry trends, new tools and design paradigms.
+Through BfE Tech and personal projects, I dabble quite a bit in various aspects of software development and am still a keen follower of the ever-changing industry trends.
 
 At the moment, I spend a fair bit of time with [Docker](https://www.docker.com/), [GitHub Action](https://github.com/features/actions) and [Terraform](https://www.terraform.io/) due to my role at BfE.
 
