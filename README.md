@@ -11,6 +11,5 @@
 ## To-do
 
 - Add GH Action testing Docker
-- Add [Plausible](https://plausible.io/)
-- Add Storybook
-- Add Collection
+- Experiment with Storybook integration
+- Add stuff to Collection
