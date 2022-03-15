@@ -30,17 +30,20 @@ jobs:
       - name: Update weather
         run: |
           outputs=$(curl "https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&appid=${OPENWEATHER_API_KEY}&units=metric" | jq -r '(.weather[0] | (.icon) + "&" + (.description) ) + "#" + (.main.temp)')
-          icon=$(echo "$outputs" | sed 's,&.*,,')
-          description=$(echo "$outputs" | sed 's,.*&,,' | sed 's,#.*,,')
-          description=${description^}
-          temperature=$(echo "$outputs" | sed 's,.*#,,')
+          icon=$(echo "$outputs" | sed 's|&.*||')
+          description=$(echo "$outputs" | sed 's|.*&||' | sed 's|#.*||')
+          temperature=$(echo "$outputs" | sed 's|.*#||')
           cd dev
           curl "https://openweathermap.org/img/wn/${icon}.png" -o assets/weather.png
-          sed -i -e "s,alt=\"[^\"]*\" ,alt=\"$description\" ,g" ./text/footer.md
+          sed -i -e "s|alt=\"[^\"]*\" |alt=\"$description\" |" ./text/footer.md
+          sed -i -e "s|> .*\&deg\;|> ${temperature}\&deg\;|" ./text/footer.md
+          sed -i -e "s|\&deg\;C, .*in my|\&deg\;C, ${description} in my|" ./text/footer.md
           cd ../prod
           cp ../dev/assets/weather.png assets/weather.png
-          sed -i -e "s,alt=\"[^\"]*\" ,alt=\"$description\" ,g" ./text/footer.md
-      
+          sed -i -e "s|alt=\"[^\"]*\" |alt=\"$description\" |" ./text/footer.md
+          sed -i -e "s|> .*\&deg\;|> ${temperature}\&deg\;|" ./text/footer.md
+          sed -i -e "s|\&deg\;C, .*in my|\&deg\;C, ${description} in my|" ./text/footer.md
+
       - name: Commit to dev
         working-directory: dev
         run: |
