@@ -29,7 +29,7 @@ jobs:
 
       - name: Update weather
         run: |
-          outputs=$(curl "https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&appid=${OPENWEATHER_API_KEY}&units=metric" | jq -r '(.weather[0] | (.icon) + "&" + (.description) ) + "#" + \(.main.temp)')
+          outputs=$(curl "https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&appid=${OPENWEATHER_API_KEY}&units=metric" | jq -r '(.weather[0] | (.icon) + "&" + (.description)) + "#" + (.main.temp | round | tostring)')
           icon=$(echo "$outputs" | sed 's|&.*||')
           description=$(echo "$outputs" | sed 's|.*&||' | sed 's|#.*||')
           temperature=$(echo "$outputs" | sed 's|.*#||')
