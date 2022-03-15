@@ -29,9 +29,11 @@ jobs:
 
       - name: Update weather
         run: |
-          outputs=$(curl "https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&appid=${OPENWEATHER_API_KEY}" | jq -r '.weather[0] | (.icon) + "&" + (.description)')
+          outputs=$(curl "https://api.openweathermap.org/data/2.5/weather?lat=${LAT}&lon=${LON}&appid=${OPENWEATHER_API_KEY}&units=metric" | jq -r '(.weather[0] | (.icon) + "&" + (.description) ) + "#" + (.main.temp)')
           icon=$(echo "$outputs" | sed 's,&.*,,')
-          description=$(echo "$outputs" | sed 's,.*&,,')
+          description=$(echo "$outputs" | sed 's,.*&,,' | sed 's,#.*,,')
+          description=${description^}
+          temperature=$(echo "$outputs" | sed 's,.*#,,')
           cd dev
           curl "https://openweathermap.org/img/wn/${icon}.png" -o assets/weather.png
           sed -i -e "s,alt=\"[^\"]*\" ,alt=\"$description\" ,g" ./text/footer.md
