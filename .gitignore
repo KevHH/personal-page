@@ -1,7 +1,8 @@
 .sass-cache
 .jekyll-metadata
+.jekyll-cache
+.DS_Store
+
 node_modules/
 _site/
 _storybook/
-.jekyll-cache
-.DS_Store
