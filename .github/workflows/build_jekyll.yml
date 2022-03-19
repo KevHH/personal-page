@@ -37,10 +37,10 @@ jobs:
 
       - name: Move build to prod
         run: |
+          chmod -R 777 prod/*
           rm -rf prod/*
           cp -r dev/_site/* prod
-          chmod -R 777 prod/*
-          find prod/ -regextype egrep -regex "\./(.*\.json|.*\.config\.js|.*\.yml|.*\.lock|README\.md)" -delete
+          find prod/ -regextype egrep -regex ".*(\.json|\.config\.js|\.yml|\.lock|README\.md)" -delete
 
       - name: Commit
         working-directory: prod
