@@ -2,5 +2,6 @@
 .jekyll-metadata
 node_modules/
 _site/
+_storybook/
 .jekyll-cache
 .DS_Store
