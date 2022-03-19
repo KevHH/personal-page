@@ -33,7 +33,7 @@ jobs:
         run: |
           chmod -R 777 .
           docker-compose -f docker-compose-prod.yml up
-          find . -regex  "_site\\\\(.*\.json|.*\.config\.js|.*\.yml|.*\.lock|README.md)" -delete
+          find . -regex  ".*_site/(.*\.json|.*\.config\.js|.*\.yml|.*\.lock|README\.md)" -delete
 
       - name: Move build to prod
         run: |
