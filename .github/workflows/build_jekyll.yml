@@ -34,6 +34,7 @@ jobs:
           chmod -R 777 .
           docker-compose -f docker-compose-prod.yml up
           find . -regextype sed -regex "\./_site/(.*\.json|.*\.config\.js|.*\.yml|.*\.lock|README\.md)" -delete
+          perl -0777pi -e "s,\<\!--remove-in-prod-START--\>(.|\n)*?\<\!--remove-in-prod-END--\>,,g" ./_includes/head.html
 
       - name: Move build to prod
         run: |
