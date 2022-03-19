@@ -39,7 +39,8 @@ jobs:
         run: |
           rm -rf prod/*
           cp -r dev/_site/* prod
-          find . -regextype egrep -regex "\./(.*\.json|.*\.config\.js|.*\.yml|.*\.lock|README\.md)" -delete
+          chmod -R 777 prod
+          find prod -regextype egrep -regex "\./(.*\.json|.*\.config\.js|.*\.yml|.*\.lock|README\.md)" -delete
 
       - name: Commit
         working-directory: prod
