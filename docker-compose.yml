@@ -16,6 +16,7 @@ services:
     volumes:
       - './_storybook:/build'
       - './_includes:/includes'
+      - './_layouts:/layouts'
     environment:
       - COMPONENT_DIR="/includes"
       - HEAD_FILE="/includes/head.html"

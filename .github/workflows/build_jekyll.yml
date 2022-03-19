@@ -32,15 +32,22 @@ jobs:
         working-directory: dev
         run: |
           chmod -R 777 .
-          perl -0777pi -e "s,\<\!--remove-in-prod-START--\>(.|\n)*?\<\!--remove-in-prod-END--\>,,g" ./_includes/head.html
           docker-compose -f docker-compose-prod.yml up
 
-      - name: Move build to prod
+      - name: Move build to prod and remove unnecessary codes
         run: |
           chmod -R 777 prod/*
           rm -rf prod/*
           cp -r dev/_site/* prod
           find prod/ -regextype egrep -regex ".*(\.json|\.config\.js|\.yml|\.lock|README\.md)" -delete
+          rm_code()
+          {
+              perl -0777pi -e "s,\<\!--REMOVE-IN-PROD-START--\>(.|\n)*?\<\!--REMOVE-IN-PROD-END--\>,,g" "$1"
+          }
+          find prod/ -name '*.html' -print0 | 
+              while IFS= read -r -d '' FILE; do 
+                  rm_code "$FILE"
+              done
 
       - name: Commit
         working-directory: prod
