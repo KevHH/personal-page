@@ -1,1 +1,1 @@
-<img src="assets/weather.png?hour=2022-03-20-10" alt="mist" width="25" height="25" style="vertical-align:middle;position:relative;top:-1pt;"/> 19&deg;C, mist in my [**hometown**](https://en.wikipedia.org/wiki/Shantou) now. [**Data source**](https://openweathermap.org/).
+<img src="assets/weather.png?hour=2022-03-24-07" alt="moderate rain" width="25" height="25" style="vertical-align:middle;position:relative;top:-1pt;"/> 16&deg;C, moderate rain in my [**hometown**](https://en.wikipedia.org/wiki/Shantou) now. [**Data source**](https://openweathermap.org/).
