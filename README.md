@@ -10,5 +10,4 @@
 
 ## To-do
 - Add GH Action testing Docker
-- Experiment with Storybook integration
 - Add stuff to Collection

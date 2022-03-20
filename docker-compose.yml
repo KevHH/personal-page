@@ -3,27 +3,10 @@ version: '3'
 
 services:
   github-page:
-    image: ghcr.io/kevhh/jekyll-tailwind:4.1.1
+    image: ghcr.io/bfe-technology/jekyll-tailwind:4.1.1
     volumes:
       - './:/srv/jekyll'
       - /srv/jekyll/_site/
     ports:
       - '4000:4000'
       - '35729:35729'
-  
-  storybook:
-    image: storybook:6.4.19
-    volumes:
-      - './_storybook:/build'
-      - './_includes:/includes'
-      - './_layouts:/layouts'
-    environment:
-      - COMPONENT_DIR="/includes"
-      - HEAD_FILE="/includes/head.html"
-  
-  storybook-server:
-    image: live-server:1.2.1
-    volumes:
-      - './_storybook:/build'
-    ports:
-      - '4001:1000'
