@@ -4,6 +4,11 @@ headshot: assets/headshot.png
 description: A bit of space to record a bit too many things.
 email: han[dot]huang[dot]20[at]ucl.ac.uk
 
+github: https://github.com/KevHH
+linkedin: https://www.linkedin.com/in/kevin-han-huang-995ab1a0/
+arxiv: https://arxiv.org/a/0000-0002-9534-7239.html
+gscholar: https://scholar.google.com/citations?hl=en&user=eJXepUMAAAAJ
+
 # specify navigation / menu bar
 nav:
   item1:
