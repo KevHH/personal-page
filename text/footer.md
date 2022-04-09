@@ -1,1 +1,1 @@
-<img src="assets/weather.png?hour=2022-04-09-09" alt="clear sky" width="25" height="25" style="vertical-align:middle;position:relative;top:-1pt;"/> 23&deg;C, clear sky in my [**hometown**](https://en.wikipedia.org/wiki/Shantou) now. [**Data source**](https://openweathermap.org/).
+<img src="assets/weather.png?hour=2022-05-23-11" alt="overcast clouds" width="25" height="25" style="vertical-align:middle;position:relative;top:-1pt;"/> 23&deg;C, overcast clouds in my [**hometown**](https://en.wikipedia.org/wiki/Shantou) now. [**Data source**](https://openweathermap.org/).
