@@ -1,4 +1,4 @@
-I am a PhD student at the [Gatsby Computational Neuroscience Unit at UCL](https://www.ucl.ac.uk/gatsby/), supervised by [Peter Orbanz](http://www.gatsby.ucl.ac.uk/~porbanz/). My [research](/research) interests revolve around developing theoretical tools from statistics and probability to improve understanding of machine learning. My current work focuses on limit theorems in structured data in the context of machine learning.
+I am a PhD student at the [Gatsby Computational Neuroscience Unit at UCL](https://www.ucl.ac.uk/gatsby/), supervised by [Peter Orbanz](http://www.gatsby.ucl.ac.uk/~porbanz/). My [research](/research) interests revolve around developing theoretical tools from statistics and probability to improve understanding of machine learning. My current work focuses on invariance and stochastic algorithms.
 
 Prior to my PhD, I receive my [Bachelor and Master in Mathematics](https://www.maths.cam.ac.uk/) from [Magdalene College](https://www.magd.cam.ac.uk/), [University of Cambridge](https://www.cam.ac.uk/about-the-university).
 
