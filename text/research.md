@@ -1,6 +1,6 @@
 ## Papers
 
-- 2023\. **A High-dimensional Convergence Theorem for U-statistics with Applications to Kernel-based Testing.**
+- 2023\. [[arXiv]](https://arxiv.org/abs/2302.05686) **A High-dimensional Convergence Theorem for U-statistics with Applications to Kernel-based Testing.**
   KH Huang, X Liu, AB Duncan, A Gandy.
 
 - 2022\. [[arXiv]](https://arxiv.org/abs/2202.09134) **Quantifying the Effects of Data Augmentation.** 
