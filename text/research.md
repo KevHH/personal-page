@@ -5,7 +5,8 @@
 
 - 2022\. [[arXiv]](https://arxiv.org/abs/2202.09134) **Quantifying the Effects of Data Augmentation.** 
   KH Huang, P Orbanz, M Austern.
-
+  
+<!-- 
 &nbsp;
 
 ## Projects prior to PhD
@@ -16,5 +17,5 @@
 
 - 2019\. *[Hackbridge](https://hackbridge.io/)*. I worked on multi-object 6d vpose prediction from 2d images with [Dominik A. Kloepfer](https://www.linkedin.com/in/dominik-a-kloepfer), supervised by [Nicolai Wojke](https://scholar.google.de/citations?user=i8BCLogAAAAJ&hl=de).
 
-- 2018\. *[Statslab, Cambridge](http://www.statslab.cam.ac.uk/)*. I worked on outlier detection in time series of graphs and extreme value theory, supervised by [Yi Yu](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/yu/) and [Jenny Wadsworth](https://www.lancaster.ac.uk/~wadswojl/).
+- 2018\. *[Statslab, Cambridge](http://www.statslab.cam.ac.uk/)*. I worked on outlier detection in time series of graphs and extreme value theory, supervised by [Yi Yu](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/yu/) and [Jenny Wadsworth](https://www.lancaster.ac.uk/~wadswojl/). -->
 
