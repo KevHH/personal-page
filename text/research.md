@@ -1,9 +1,9 @@
 ## Papers
 
 - **A High-dimensional Convergence Theorem for U-statistics with Applications to Kernel-based Testing** [[arXiv]](https://arxiv.org/abs/2302.05686) <br>
-  KH Huang, X Liu, AB Duncan, A Gandy. *COLT 2023*.
+  KH Huang, X Liu, AB Duncan, A Gandy. &nbsp;<span class="text-slate-400"> *Conference on Learning Theory, 2023*. </span>
 
-- **Quantifying the Effects of Data Augmentation.** [[arXiv]](https://arxiv.org/abs/2202.09134) <br>
+- **Quantifying the Effects of Data Augmentation** [[arXiv]](https://arxiv.org/abs/2202.09134) <br>
   KH Huang, P Orbanz, M Austern.
 
 &nbsp;
