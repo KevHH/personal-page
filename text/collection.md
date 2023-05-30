@@ -13,4 +13,4 @@ Just a notepad for some useful things.
 &nbsp;
 
 ## Dev
-- [Collection of web dev tools](https://toolkit.addy.codes/) by Adam Greenough
+- [Collection of web dev tools](https://toolkit.addy.codes/) by Adam Greenough 
