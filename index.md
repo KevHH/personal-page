@@ -1,4 +1,4 @@
 ---
 layout: main
 ---
-{% include profile.html image="assets/headshot.png" text="text/profile.md" %}
+{% include profile.html image="assets/Kevin_photo.jpg" text="text/profile.md" %}
