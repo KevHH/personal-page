@@ -1,6 +1,6 @@
 ## Papers
 
-- **A High-dimensional Convergence Theorem for U-statistics with Applications to Kernel-based Testing** [[arXiv]](https://arxiv.org/abs/2302.05686) [[Short Talk]](https://youtu.be/FT1JPC29Mg8) [[Long Talk]](https://youtu.be/k4Spv8QHsg8) <br>
+- **A High-dimensional Convergence Theorem for U-statistics with Applications to Kernel-based Testing** [[arXiv]](https://arxiv.org/abs/2302.05686) [[PMLR]](https://proceedings.mlr.press/v195/huang23a/huang23a.pdf) [[Short Talk]](https://youtu.be/FT1JPC29Mg8) [[Long Talk]](https://youtu.be/k4Spv8QHsg8) <br>
   KH Huang, X Liu, AB Duncan, A Gandy. <br>
   <span style="color: #94a3b8">Conference on Learning Theory, 2023.</span>
 
