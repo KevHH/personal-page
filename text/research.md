@@ -1,6 +1,6 @@
 ## Papers
 
-- **Gaussian universality for approximately polynomial functions of high-dimensional data** [[arXiv]](https://arxiv.org/abs/2403.10711) <br>
+- **Gaussian Universality for Approximately Polynomial Functions of High-dimensional Data** [[arXiv]](https://arxiv.org/abs/2403.10711) <br>
   KH Huang, M Austern, P Orbanz.
 
 - **Data Augmentation in the Underparameterized and Overparameterized Regimes** [[arXiv]](https://arxiv.org/abs/2202.09134) <br>
