@@ -2,7 +2,7 @@ I am a PhD student at the [Gatsby Computational Neuroscience Unit at UCL](https:
 
 I organise the [Foundations and Landmarks reading group](https://foundations-landmarks.notion.site/) with [Max Hird](https://www.linkedin.com/in/max-hird-366a30b4/), a biweekly reading group based in London, reviewing foundational papers in probability and statistics. 
 
-I am visiting the [LIPS group at Princeton](https://lips.cs.princeton.edu/) this spring, where I work with [Ryan P. Adams](https://www.cs.princeton.edu/~rpa/) on invariance learning.
+I am visiting the [LIPS group at Princeton](https://lips.cs.princeton.edu/) this spring, where I work with [Ryan P. Adams](https://www.cs.princeton.edu/~rpa/) on invariance learning. I will be visiting the [Department of Statistics at Harvard](https://statistics.fas.harvard.edu/) for the first two weeks of April.
 
 Prior to my PhD, I received my [Bachelor and Master in Mathematics](https://www.maths.cam.ac.uk/) from [Magdalene College](https://www.magd.cam.ac.uk/), [University of Cambridge](https://www.cam.ac.uk/about-the-university).
 
