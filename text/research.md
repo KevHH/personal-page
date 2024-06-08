@@ -1,5 +1,8 @@
 ## Papers
 
+- **Near-Optimality of Contrastive Divergence Algorithms** <br>
+  P Glaser, KH Huang, A Gretton
+
 - **Gaussian Universality for Approximately Polynomial Functions of High-dimensional Data** [[arXiv]](https://arxiv.org/abs/2403.10711) <br>
   KH Huang, M Austern, P Orbanz.
 
