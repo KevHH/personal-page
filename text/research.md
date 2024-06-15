@@ -16,21 +16,21 @@
 &nbsp;
 
 ## Talks and Posters
-### Gaussian universality
-- **Contributed talk**, Bernoulli‑IMS 11th World Congress in Probability and Statistics, 2024
-- **Invited talk**, London Meeting on Computational Statistics, 2024
-- **Talk at Stat300 Seminar**, Department of Statistics, Harvard University, 2024
+#### Gaussian universality
+- Contributed talk, *Bernoulli‑IMS 11th World Congress in Probability and Statistics*, 2024
+- Invited talk, *London Meeting on Computational Statistics*, 2024
+- Talk at Stat300 Seminar, *Department of Statistics, Harvard University*, 2024
 
-### High-dimensional U-statistics
-- **Talk at Statistics and Machine Learning Reading Group**, Carnegie Mellon University, 2024
-- **Talk at Causal inference reading group**, Statslab, University of Cambridge, 2024
-- **Poster at UK Easter Probability Meeting**, 2023
+#### High-dimensional U-statistics
+- Talk at Statistics and Machine Learning Reading Group, *Carnegie Mellon University*, 2024
+- Talk at Causal inference reading group, *Statslab, University of Cambridge*, 2024
+- Poster, *UK Easter Probability Meeting*, 2023
 
-### Data augmentation
-- **Talk at Department of Statistics**, University of Warwick, 2023
-- **Talk at CSML reading group**, Imperial College London, 2022
-- **Best poster at UCL Statistical Science Poster Day**, 2022
-- **Talk at Austern Group**, Department of Statistics, Harvard University, 2022
+#### Data augmentation
+- Talk at Department of Statistics, *University of Warwick*, 2023
+- Talk at CSML reading group, *Imperial College London*, 2022
+- Best poster, *UCL Statistical Science Poster Day*, 2022
+- Talk at Austern Group, *Department of Statistics, Harvard University*, 2022
 
 &nbsp;
 
