@@ -1,10 +1,8 @@
 ## Teaching
 
-- 2024\. *University College London*. Lecture and tutorials for **Probability** in the [Gatsby bridging programme](https://www.ucl.ac.uk/gatsby/study-and-work/gatsby-bridging-programme), a
-summer school covering mathematical foundations for undergraduate
-students intending to pursue research in theoretical neuroscience and/or machine learning
+- 2024\. *University College London*. Lectures and tutorials for **Probability** in the [Gatsby bridging programme](https://www.ucl.ac.uk/gatsby/study-and-work/gatsby-bridging-programme)
 
-- 2021\. *University College London*. TA for **COMP0086: Probabilistic and Unsupervised Learning** and **COMP0085: Approximate Inference and Learning in Probabilistic Models**. [[Course link]](http://www.gatsby.ucl.ac.uk/teaching/courses/ml1/).
+- 2021\. *University College London*. TA for **COMP0086: Probabilistic and Unsupervised Learning** and **COMP0085: Approximate Inference and Learning in Probabilistic Models** [[Course link]](http://www.gatsby.ucl.ac.uk/teaching/courses/ml1/)
 
 &nbsp;
 
