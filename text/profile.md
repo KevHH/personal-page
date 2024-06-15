@@ -2,7 +2,9 @@ I am a PhD candidate at the [Gatsby Computational Neuroscience Unit at UCL](http
 
 I organise the [Foundations and Landmarks reading group](https://foundations-landmarks.notion.site/) with [Max Hird](https://www.linkedin.com/in/max-hird-366a30b4/), a biweekly reading group based in London, reviewing foundational papers in probability and statistics. 
 
-Prior to my PhD, I received my [Bachelor and Master in Mathematics](https://www.maths.cam.ac.uk/) from [Magdalene College](https://www.magd.cam.ac.uk/), [University of Cambridge](https://www.cam.ac.uk/about-the-university). I was a visiting researcher at the [LIPS group at Princeton CS](https://lips.cs.princeton.edu/) for Spring 2024, where I worked on neural-network ansatzs for crystalline solids. 
+Prior to my PhD, I received my [Bachelor and Master in Mathematics](https://www.maths.cam.ac.uk/) from [Magdalene College](https://www.magd.cam.ac.uk/), [University of Cambridge](https://www.cam.ac.uk/about-the-university). 
+
+I was a visiting researcher at the [LIPS group at Princeton CS](https://lips.cs.princeton.edu/) for Spring 2024, where I worked on neural-network ansatzs for crystalline solids. 
 
 I also do [nonprofit work, software development, and a bit of cooking](/non-maths) on the side.
 
