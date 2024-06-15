@@ -17,20 +17,20 @@
 
 ## Talks and Posters
 #### Gaussian universality
-- Contributed talk, *Bernoulli‑IMS 11th World Congress in Probability and Statistics*, 2024
-- Invited talk, *London Meeting on Computational Statistics*, 2024
-- Talk at Stat300 Seminar, *Department of Statistics, Harvard University*, 2024
+- Contributed talk, <span style="color: #94a3b8">Bernoulli‑IMS 11th World Congress in Probability and Statistics 2024</span>
+- Invited talk, <span style="color: #94a3b8">London Meeting on Computational Statistics 2024</span>
+- Talk at Stat300 Seminar, <span style="color: #94a3b8">Department of Statistics, Harvard University, 2024</span>
 
 #### High-dimensional U-statistics
-- Talk at Statistics and Machine Learning Reading Group, *Carnegie Mellon University*, 2024
-- Talk at Causal inference reading group, *Statslab, University of Cambridge*, 2024
-- Poster, *UK Easter Probability Meeting*, 2023
+- Talk at Statistics and Machine Learning Reading Group, <span style="color: #94a3b8">Carnegie Mellon University, 2024</span>
+- Talk at Causal inference reading group, <span style="color: #94a3b8">Statslab, University of Cambridge, 2024</span>
+- Poster, <span style="color: #94a3b8">UK Easter Probability Meeting 2023</span>
 
 #### Data augmentation
-- Talk at Department of Statistics, *University of Warwick*, 2023
-- Talk at CSML reading group, *Imperial College London*, 2022
-- Best poster, *UCL Statistical Science Poster Day*, 2022
-- Talk at Austern Group, *Department of Statistics, Harvard University*, 2022
+- Talk at Department of Statistics, <span style="color: #94a3b8">University of Warwick, 2023</span>
+- Talk at CSML reading group, <span style="color: #94a3b8">Imperial College London, 2022</span>
+- Best poster, <span style="color: #94a3b8">UCL Statistical Science Poster Day 2022</span>
+- Talk at Austern Group, <span style="color: #94a3b8">Department of Statistics, Harvard University, 2022</span>
 
 &nbsp;
 
