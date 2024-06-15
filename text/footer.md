@@ -1,1 +1,1 @@
-<img src="assets/weather.png?hour=2024-06-08-21" alt="few clouds" width="25" height="25" style="vertical-align:middle;position:relative;top:-1pt;"/> 24&deg;C, few clouds in my [**hometown**](https://en.wikipedia.org/wiki/Shantou) now. [**Data source**](https://openweathermap.org/).
+<img src="assets/weather.png?hour=2024-06-15-09" alt="light rain" width="25" height="25" style="vertical-align:middle;position:relative;top:-1pt;"/> 30&deg;C, light rain in my [**hometown**](https://en.wikipedia.org/wiki/Shantou) now. [**Data source**](https://openweathermap.org/).
