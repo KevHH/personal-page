@@ -14,3 +14,7 @@ Just a notepad for some useful things.
 
 ## Dev
 - [Collection of web dev tools](https://toolkit.addy.codes/) by Adam Greenough 
+- [Bib cleaner](https://github.com/KevHH/bib_cleaner) by me </br>
+   This is a script that replaces journal names in a `.bib` file with AMS-style abbreviations. Customisation is possible by a `.csv` file.
+- [Script for parallelising jax over multiple Slurm nodes](https://github.com/KevHH/slurm_jax_multinode) by me </br> 
+   This script is useful for an older version of `jax` where automatic detection of IP address in multiple slurm nodes is not yet available in `jax.distributed`. 

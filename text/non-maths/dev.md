@@ -8,6 +8,6 @@ This website is built with [Jekyll](https://jekyllrb.com/) and [Tailwind CSS](ht
 
 After all the excitement learning [Arduino](https://www.arduino.cc/) and [Raspberry Pi](https://www.raspberrypi.org/) from the amazing PhD training bootcamp with [Cajal](http://cajal-training.org/neurokit/experim-neuroscience/), I currently keep a laundry list of long-overdued electronic ideas that I dig into from time to time.
 
-
+Some small tools I built are listed [here](/collection).
 
  
