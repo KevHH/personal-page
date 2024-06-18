@@ -1,1 +1,1 @@
-<img src="assets/weather.png?hour=2024-06-15-10" alt="shower rain" width="25" height="25" style="vertical-align:middle;position:relative;top:-1pt;"/> 29&deg;C, shower rain in my [**hometown**](https://en.wikipedia.org/wiki/Shantou) now. [**Data source**](https://openweathermap.org/).
+<img src="assets/weather.png?hour=2024-06-18-09" alt="broken clouds" width="25" height="25" style="vertical-align:middle;position:relative;top:-1pt;"/> 28&deg;C, broken clouds in my [**hometown**](https://en.wikipedia.org/wiki/Shantou) now. [**Data source**](https://openweathermap.org/).
