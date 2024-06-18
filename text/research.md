@@ -1,6 +1,6 @@
 ## Papers
 
-- **Slow rates of approximation of U-statistics and V-statistics by quadratic forms of Gaussians** <br>
+- **Slow Rates of Approximation of U-statistics and V-statistics by Quadratic Forms of Gaussians** <br>
   KH Huang, P Orbanz.
 
 - **Near-Optimality of Contrastive Divergence Algorithms** <br>
