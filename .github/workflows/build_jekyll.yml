@@ -32,7 +32,7 @@ jobs:
         working-directory: dev
         run: |
           chmod -R 777 .
-          docker-compose -f docker-compose-prod.yml up
+          docker compose -f docker-compose-prod.yml up
 
       - name: Move build to prod and remove unnecessary codes
         run: |
