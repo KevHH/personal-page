@@ -39,5 +39,5 @@
 
 ## Services
 
-- **Journal review:** Biometrika, Annals of Statistics, Annals of Applied Probability
+- **Journal review:** Annals of Applied Probability, Annals of Statistics, Biometrika, Electronic Journal of Statistics
 - **Conference review:** AISTATS, ALT
