@@ -1,1 +1,1 @@
-<img src="assets/weather.png?hour=2024-09-25-20" alt="broken clouds" width="25" height="25" style="vertical-align:middle;position:relative;top:-1pt;"/> 25&deg;C, broken clouds in my [**hometown**](https://en.wikipedia.org/wiki/Shantou) now. [**Data source**](https://openweathermap.org/).
+<img src="assets/weather.png?hour=2024-10-25-01" alt="overcast clouds" width="25" height="25" style="vertical-align:middle;position:relative;top:-1pt;"/> 24&deg;C, overcast clouds in my [**hometown**](https://en.wikipedia.org/wiki/Shantou) now. [**Data source**](https://openweathermap.org/).
