@@ -10,7 +10,7 @@
   KH Huang, P Orbanz, M Austern.
 
 - **Near-Optimality of Contrastive Divergence Algorithms** <br>
-  P Glaser, KH Huang, A Gretton.
+  P Glaser, KH Huang, A Gretton. <br>
   <span style="color: #94a3b8">Advances in Neural Information Processing Systems (NeurIPS), 2024.</span>
 
 - **A High-dimensional Convergence Theorem for U-statistics with Applications to Kernel-based Testing** [[arXiv]](https://arxiv.org/abs/2302.05686) [[PMLR]](https://proceedings.mlr.press/v195/huang23a/huang23a.pdf) <br>
